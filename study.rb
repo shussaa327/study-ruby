@@ -1,5 +1,24 @@
 puts "study ruby"
 
+def fizz_buzz(number)
+  if number % 3 == 0 && number % 5 == 0
+    puts "FizzBuzz"
+  elsif number % 3 == 0
+    puts "Fizz"
+  elsif number % 5 == 0
+    puts "Buzz"
+  else
+    puts number.to_s
+  end
+end
+
+puts "1以上の数字を入力してください"
+i= gets.to_i
+puts "結果は"
+puts fizz_buzz(i)
+
+
+=begin
 d = 0
 starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 while d < 1000
@@ -10,6 +29,7 @@ ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 elapsed = ending - starting
 puts "計算までにかかった時間は"
 puts "#{elapsed}秒です"
+
 
 puts "計算を始めます"
 puts "何回計算を繰り返しますか?"
@@ -32,3 +52,4 @@ while i <= count do
 end
 
 puts "計算を終了します"
+=end
